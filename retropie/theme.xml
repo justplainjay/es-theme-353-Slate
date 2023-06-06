@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+
+	<formatVersion>7</formatVersion>
+	<include>./../theme.xml</include>
+	
+<!-- System & Detailed View Logos -->
+	<view name="system, detailed">
+		<image name="logo">
+			<path>./system.svg</path>
+			<path>./system.png</path>
+    	</image>
+	</view>
+
+<!-- Basic & Detailed System Name -->
+	<view name="detailed, basic">
+		<text name="systemFullName" extra="true">
+			<text>Options</text>
+		</text>
+	</view>
+	
+<!-- Description for System View -->
+
+</theme>

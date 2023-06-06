@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+
+	<formatVersion>7</formatVersion>
+	<include>./../theme.xml</include>
+<!-- Logo for System, Basic, and Detailed Views -->
+	<view name="system, basic, detailed">
+		<image name="logo">
+			<path>./system.svg</path>
+    	</image>
+	</view>
+
+	<view name="basic"></view>
+	<view name="detailed"></view>
+	
+</theme>
