@@ -8,6 +8,8 @@ This has not been tested on any other devices, but should work on other 4:3 RK35
 - Variables
 - Subsets (Currently Unavailable)
 - Screen View
+- System, Basic, Detailed & Grid View
+
 
 ## Resources
 
