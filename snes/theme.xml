@@ -2,15 +2,36 @@
 <theme>
 
 	<formatVersion>7</formatVersion>
-	<include>./../theme.xml</include>
-<!-- Logo for System, Basic, and Detailed Views -->
-	<view name="system, basic, detailed">
-		<image name="logo">
-			<path>./system.svg</path>
-    	</image>
-	</view>
+	<include>./../theme.xml</include>	
+<!-- SYSTEM & DETAILED View Logos -->
+<view name="system, detailed">
 
-	<view name="basic"></view>
-	<view name="detailed"></view>
+	<image name="logo">
+		<path>./white.svg</path>
+	</image>
+
+</view>
+<!-- BASIC & DETAILED System Name -->
+<view name="detailed, basic, grid">
+
+	<text name="systemFullName" extra="true">
+		<text>Super Nintendo Entertainment System</text>
+	</text>
+
+</view>
+<!-- SYSTEM VIEW Metadata -->
+<view name="system">
+
+	<text name="manufacturer" extra="true">
+		<text>Nintendo</text>
+	</text>
+	<text name="releaseYear" extra="true">
+		<text>1990</text>
+	</text>
+	<text name="systemtype" extra="true">
+			<text>16-bit Console</text>
+	</text>
 	
+</view>
+
 </theme>

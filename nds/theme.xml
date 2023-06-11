@@ -15,7 +15,7 @@
 <view name="detailed, basic, grid">
 
 	<text name="systemFullName" extra="true">
-		<text>Nintendo Entertainment System</text>
+		<text>Nintendo | DS</text>
 	</text>
 
 </view>
@@ -26,10 +26,10 @@
 		<text>Nintendo</text>
 	</text>
 	<text name="releaseYear" extra="true">
-		<text>1983</text>
+		<text>2004</text>
 	</text>
 	<text name="systemtype" extra="true">
-			<text>8-bit Console</text>
+		<text>32-bit Handheld</text>
 	</text>
 	
 </view>

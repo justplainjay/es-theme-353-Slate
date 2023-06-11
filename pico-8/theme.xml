@@ -15,7 +15,7 @@
 <view name="detailed, basic, grid">
 
 	<text name="systemFullName" extra="true">
-		<text>Nintendo Entertainment System</text>
+		<text>PICO-8</text>
 	</text>
 
 </view>
@@ -23,13 +23,13 @@
 <view name="system">
 
 	<text name="manufacturer" extra="true">
-		<text>Nintendo</text>
+		<text>Lexaloffle Games</text>
 	</text>
 	<text name="releaseYear" extra="true">
-		<text>1983</text>
+		<text>2003</text>
 	</text>
 	<text name="systemtype" extra="true">
-			<text>8-bit Console</text>
+		<text>Pixel Engine</text>
 	</text>
 	
 </view>

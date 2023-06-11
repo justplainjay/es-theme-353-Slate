@@ -7,503 +7,617 @@ Based on:			es-theme-spare by mattrixk
 -->
 <?xml version="1.0" encoding="UTF-8"?>
 <theme>
-	<formatVersion>7</formatVersion>
+<formatVersion>7</formatVersion>
 <!-- VARIABLES -->
 
-	<variables>
-		<!-- Font -->
-		<lightFont>./_inc/fonts/Roboto-Light.ttf</lightFont>
-		<mediumFont>./_inc/fonts/Roboto-medium.ttf</mediumFont>
-		<footerFontSize>0.035</footerFontSize>
-		<!-- Theme Colors -->
-		<themeColor1>2C3333</themeColor1>
-		<themeColor2>2E4F4F</themeColor2>	
-		<themeColor3>0E8388</themeColor3>	
-		<themeAccent>CBE4DE</themeAccent>
-		<helperColor1>EEC90044</helperColor1>
-		<helperColor2>4169E144</helperColor2>
-		<!-- Background -->
-		<backgroundImage>./_inc/images/bg_color.png</backgroundImage>
-		<backgroundPattern>./_inc/images/bg_pattern.png</backgroundPattern>
-	</variables>
-	
+<variables>
+	<!-- Font -->
+	<lightFont>./_inc/fonts/Roboto-Light.ttf</lightFont>
+	<mediumFont>./_inc/fonts/Roboto-medium.ttf</mediumFont>
+	<footerFontSize>0.035</footerFontSize>
+	<!-- Theme Colors -->
+	<themeColor1>2C3333</themeColor1>
+	<themeColor2>2E4F4F</themeColor2>
+	<themeColor3>0E8388</themeColor3>
+	<themeAccent>CBE4DE</themeAccent>
+	<helperColor1>EEC90044</helperColor1>
+	<helperColor2>4169E144</helperColor2>
+	<!-- Background -->
+	<backgroundImage>./_inc/images/bg_color.png</backgroundImage>
+	<backgroundPattern>./_inc/images/bg_pattern.png</backgroundPattern>
+</variables>
 
-
+<!-- SUBSETS -->
+	<!-- <subset name="fontcolor" displayName="Font Color">
+		<include name="white" displayName="White">./_inc/fonts/whitefont.xml</include>
+		<include name="red" displayName="Red">./_inc/fonts/redfont.xml</include> -->
+		
 <!-- SCREEN VIEW -->
 
-	<view name="screen">
+<view name="screen">
 	
-		<!-- CLOCK -->
-		<image name="clock_helper" extra="false">
-			<path>${backgroundImage}</path>
-			<origin>1 0</origin>
-			<pos>.99 0.01</pos>
-			<size>0.125 0.05</size>
-			<color>${helperColor2}</color>
-		</image>
-		<text name="clock">
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>0.035</fontSize>
-			<color>${themeAccent}</color>
-			<origin>1 0</origin>
-			<pos>.99 0.01</pos>
-			<size>0.125 0.05</size>
-			<alignment>right</alignment>
-			<verticalAlignment>center</verticalAlignment>
-		</text>
-		<!-- BATTERY -->
-		<image name="battery_helper" extra="false">
-			<path>${backgroundImage}</path>
-			<origin>0 0</origin>
-			<pos>0.01 0.01</pos>
-			<size>0.125 0.05</size>
-			<color>${helperColor2}</color>
-		</image>
-		<batteryIndicator name="batteryIndicator">
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>0.04</fontSize>
-			<origin>0 0</origin>
-			<pos>0.01 0.0015</pos>
-			<color>${themeAccent}</color>
-		</batteryIndicator>
+	<!-- CLOCK -->
+	<image name="clock_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>1 0</origin>
+		<pos>.99 0.01</pos>
+		<size>0.125 0.05</size>
+		<color>${helperColor2}</color>
+	</image>
+	<text name="clock">
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.035</fontSize>
+		<color>${themeAccent}</color>
+		<origin>1 0</origin>
+		<pos>.99 0.01</pos>
+		<size>0.125 0.05</size>
+		<alignment>right</alignment>
+		<verticalAlignment>center</verticalAlignment>
+	</text>
+	<!-- BATTERY -->
+	<image name="battery_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>0 0</origin>
+		<pos>0.01 0.01</pos>
+		<size>0.125 0.05</size>
+		<color>${helperColor2}</color>
+	</image>
+	<batteryIndicator name="batteryIndicator">
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.04</fontSize>
+		<origin>0 0</origin>	
+		<pos>0.01 0.0015</pos>
+		<color>${themeAccent}</color>
+	</batteryIndicator>
+
+</view>
+
+<!--
+SYSTEM
+BASIC
+DETAILED
+GRID VIEWS
+-->
+
+<view name="system, basic, detailed, grid">
+
+
+
+	<!-- ALL VIEWS -->
+	<!-- HELP MENU -->
+	<image name="background_help" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>0 1</origin>
+		<pos>0 1</pos>
+		<size>1 0.070</size>
+		<color>FFFFFF99</color>
+	</image>
+	<helpsystem name="help">
+		<pos>1 1</pos>
+		<textColor>000000</textColor>
+		<iconColor>000000</iconColor>
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.025</fontSize>
+	</helpsystem>
+	<!-- ALL VIEWS
+	Background Color & Pattern -->
+	<image name="background_color" extra="true">
+   		<path>${backgroundImage}</path>
+		<origin>0 0</origin>
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<color>${themeColor1}33</color>
+	</image>
+	<image name="background_pattern" extra="true">
+		<path>${backgroundPattern}</path>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+		<size>1 1</size>
+		<color>${themeColor3}0D</color>
+		<tile>true</tile>
+	</image>	
+	<!-- All Views
+	Header and Footer Bars -->		
+	<image name="header_bar, footer_bar" extra="true">
+		<path>${backgroundImage}</path>
+		<size>1 0.070</size>
+		<gradientType>vertical</gradientType> 
+	</image>
+	<image name="header_bar" extra="true">
+		<origin>0 0</origin>
+		<pos>0 0</pos>
+		<color>${themeColor2}33</color>
+		<colorEnd>00000033</colorEnd>
+	</image>
+	<image name="footer_bar" extra="true">
+		<origin>0 1</origin>
+		<pos>0 1</pos>
+		<color>00000033</color>
+		<colorEnd>${themeColor2}33</colorEnd>
+	</image>
+	<!-- All Views
+	CONSISTENT HELPER-->
+	<image name="consistent_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+		<size>0.98 0.825</size>
+		<color>${helperColor1}</color>
+	</image>
 	
-	</view>
+</view>
 
+<!--
+BASIC
+DETAILED
+GRID VIEWS
+-->
 
-
-<!-- SYSTEM, BASIC, DETAILED VIEWS -->
-
-	<view name="system, basic, detailed">
-
-		<!-- HELP MENU -->
-		<!-- All Views
-		Help Menu Background set true to view-->
-		<image name="background_help" extra="false">
-			<path>${backgroundImage}</path>
-			<origin>0 1</origin>
-			<pos>0 1</pos>
-			<size>1 0.070</size>
-			<color>FFFFFF99</color>
-		</image>
-		<!-- All Views
-		Help Menu Font Hide pos tag to view-->
-		<helpsystem name="help">
-			<pos>1 1</pos>
-			<textColor>000000</textColor>
-			<iconColor>000000</iconColor>
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>0.025</fontSize>
-		</helpsystem>
-		<!-- All Views
-		Background Color & Pattern -->
-		<image name="background_color" extra="true">
-    		<path>${backgroundImage}</path>
-			<origin>0 0</origin>
-			<pos>0 0</pos>
-			<size>1 1</size>
-			<color>${themeColor1}</color>
-		</image>
-		<image name="background_pattern" extra="true">
-			<path>${backgroundPattern}</path>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-			<size>1 1</size>
-			<color>${themeColor3}1A</color>
-			<tile>true</tile>
-		</image>	
-		<!-- All Views
-		Header and Footer Bars -->		
-		<image name="header_bar, footer_bar" extra="true">
-				<path>${backgroundImage}</path>
-				<size>1 0.070</size>
-				<color>${themeColor2}80</color>		</image>
-		<image name="header_bar" extra="true">
-			<origin>0 0</origin>
-			<pos>0 0</pos>
-		</image>
-		<image name="footer_bar" extra="true">
-			<origin>0 1</origin>
-			<pos>0 1</pos>
-		</image>
-
-	</view>
-
-
-<!-- BASIC & DETAILED VIEW -->
-
-	<view name="basic,detailed">
+<view name="basic, detailed, grid">
 		
-		<!-- System Name Text -->
-		<text name="systemFullName" extra="true">
-			<fontPath>${mediumFont}</fontPath>
-			<alignment>center</alignment>
-			<forceUppercase>0</forceUppercase>
-			<fontSize>${footerFontSize}</fontSize>
-			<color>${themeAccent}</color>	
-			<origin>0.5 0</origin>
-			<pos>0.5 0.01</pos>
-			<size>.7 0.05</size>
-		</text>
+	<!-- System Name Text -->
+	<text name="systemFullName" extra="true">
+		<fontPath>${mediumFont}</fontPath>
+		<alignment>center</alignment>
+		<forceUppercase>0</forceUppercase>
+		<fontSize>${footerFontSize}</fontSize>
+		<color>${themeAccent}</color>	
+		<origin>0.5 0</origin>
+		<pos>0.5 0.01</pos>
+		<size>.7 0.05</size>
+	</text>
 
-	</view>
+</view>
 
+<!--
+DETAILED
+GRID VIEWS
+-->
+
+<view name ="detailed, grid">
+	<!-- Helper Boxes -->
+	<image name="releasedate_helper, genre_helper, publisher_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<color>${helperColor1}</color>
+	</image>
+	<image name="releasedate_helper" extra="false">
+		<origin>0.5 1</origin>
+		<pos>0.5 0.99</pos>
+		<size>0.2 0.05</size>
+	</image>
+	<image name="genre_helper" extra="false">
+		<origin>1 1</origin>
+		<pos>.99 .99</pos>
+		<size>0.375 0.05</size>
+	</image>				
+	<image name="publisher_helper" extra="false">
+		<origin>0 0</origin>
+		<pos>0.01 0.94</pos>
+		<size>0.375 0.05</size>
+	</image>
+	<!-- Footer Metadata -->
+	<!-- Release Date -->
+	<datetime name="md_releasedate">
+		<color>${themeAccent}</color>
+		<forceUppercase>0</forceUppercase>
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.035</fontSize>
+		<size>0.3 0.05</size>
+		<origin>0.5 1</origin>
+		<pos>0.5 0.99</pos>
+		<alignment>center</alignment>
+		<horizontalAlignment>center</horizontalAlignment>
+	</datetime>
+	<!-- Publisher & Genre -->
+	<text name="md_publisher, md_genre">
+		<color>${themeAccent}</color>	
+		<forceUppercase>0</forceUppercase>
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.035</fontSize>
+		<size>0.23 0.02</size>
+	</text>
+	<text name="md_publisher">
+		<origin>0 0</origin>
+		<pos>0.01 0.94</pos>
+		<size>0.375 0.05</size>
+	</text>
+	<text name="md_genre">
+		<alignment>right</alignment>
+		<origin>1 1</origin>
+		<pos>.99 .99</pos>
+		<size>0.375 0.05</size>
+	</text>
+		
+</view>
 
 <!-- SYSTEM VIEW -->
 
-	<view name="system">
+<view name="system">
 		
-		<!-- CAROUSEL -->
-		<carousel name="systemcarousel">
-			<origin>0 0</origin>
-			<pos>0 0</pos>
-			<type>horizontal</type>
-			<color>FFFFFF00</color>
-			<size>1 1</size>
-			<logoSize>0.9 0.425</logoSize>
-			<logoScale>.5</logoScale>
-			<maxLogoCount>2</maxLogoCount>
-		</carousel>
+	<!-- CAROUSEL -->
+	<carousel name="systemcarousel">
+		<origin>0 0</origin>
+		<pos>0 0</pos>
+		<type>horizontal</type>
+		<color>FFFFFF00</color>
+		<size>1 1</size>
+		<logoSize>0.9 0.425</logoSize>
+		<logoScale>.5</logoScale>
+		<maxLogoCount>2</maxLogoCount>
+	</carousel>
 		
-		<!-- System View
-		Helper Boxes -->
-		<image name="sytemInfo_helper, releaseYear_helper, manufacturer_helper, systemtype_helper" extra="false">
-			<path>${backgroundImage}</path>
-			<color>0000EE44</color>
-		</image>
-		<image name="sytemInfo_helper" extra="false">
-			<origin>0.5 0</origin>
-			<pos>0.5 0.01</pos>
-			<size>.7 0.05</size>
-		</image>
-		<image name="releaseYear_helper" extra="false">
-			<origin>0.5 1</origin>
-			<pos>0.5 0.99</pos>
-			<size>0.2 0.05</size>
-		</image>
-		<image name="manufacturer_helper" extra="false">
-			<origin>0 0</origin>
-			<pos>0.01 0.94</pos>
-			<size>0.375 0.05</size>
-		</image>
-		<image name="systemtype_helper" extra="false">
-			<origin>1 1</origin>
-			<pos>.99 .99</pos>
-			<size>0.375 0.05</size>
-		</image>
-		<!-- System View
-		System Info, Manufacturer, Release Year, and System Type
-		Variables pulled from theme.xml on System Specific Folders -->
-		<text name="systemInfo, manufacturer, releaseYear, systemtype"> 
-			<color>${themeAccent}</color>
-			<fontSize>${footerFontSize}</fontSize>
-		</text>
-		<text name="manufacturer, releaseYear, systemtype"> 
-			<fontPath>${lightFont}</fontPath>
-			<forceUppercase>0</forceUppercase>
-			<lineSpacing>1.18</lineSpacing>
-		</text>
-		<!-- System View
-		System Information -->		
-		<text name="systemInfo"> 
-			<fontPath>${mediumFont}</fontPath>
-			<alignment>left</alignment>
-			<forceUppercase>1</forceUppercase>
-			<origin>0.5 0</origin>
-			<pos>0.5 0.01</pos>
-			<size>.7 0.05</size>
-			<alignment>center</alignment>
-			<verticalAlignment>middle</verticalAlignment>
-		</text>		
-		<!-- System View
-		Manufacturer -->
-		<text name="manufacturer" extra="true">
-			<alignment>left</alignment>
-			<origin>0 0</origin>
-			<pos>0.01 0.94</pos>
-			<size>0.375 0.05</size>
-		</text>
-		<!-- System View
-		Release Year -->
-		<text name="releaseYear" extra="true">
-			<alignment>center</alignment>
-			<origin>0.5 1</origin>
-			<pos>0.5 0.99</pos>
-			<size>0.2 0.05</size>
-		</text>
-		<!-- System View
-		System Type -->
-		<text name="systemtype" extra="true">
-			<alignment>right</alignment>
-			<origin>1 1</origin>
-			<pos>.99 .99</pos>
-			<size>0.375 0.05</size>
-		</text>
+	<!-- System View
+	Helper Boxes -->
+	<image name="sytemInfo_helper, releaseYear_helper, manufacturer_helper, systemtype_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<color>0000EE44</color>
+	</image>
+	<image name="sytemInfo_helper" extra="false">
+		<origin>0.5 0</origin>
+		<pos>0.5 0.01</pos>
+		<size>.7 0.05</size>
+	</image>
+	<image name="releaseYear_helper" extra="false">
+		<origin>0.5 1</origin>
+		<pos>0.5 0.99</pos>
+		<size>0.2 0.05</size>
+	</image>
+	<image name="manufacturer_helper" extra="false">
+		<origin>0 0</origin>
+		<pos>0.01 0.94</pos>
+		<size>0.375 0.05</size>
+	</image>
+	<image name="systemtype_helper" extra="false">
+		<origin>1 1</origin>
+		<pos>.99 .99</pos>
+		<size>0.375 0.05</size>
+	</image>
+	<!-- System View
+	System Info, Manufacturer, Release Year, and System Type
+	Variables pulled from theme.xml on System Specific Folders -->
+	<text name="systemInfo, manufacturer, releaseYear, systemtype"> 
+		<color>${themeAccent}</color>
+		<fontSize>${footerFontSize}</fontSize>
+	</text>
+	<text name="manufacturer, releaseYear, systemtype"> 
+		<fontPath>${lightFont}</fontPath>
+		<forceUppercase>0</forceUppercase>
+		<lineSpacing>1.18</lineSpacing>
+	</text>
+	<!-- System View
+	System Information -->		
+	<text name="systemInfo"> 
+		<fontPath>${mediumFont}</fontPath>
+		<alignment>left</alignment>
+		<forceUppercase>1</forceUppercase>
+		<origin>0.5 0</origin>
+		<pos>0.5 0.01</pos>
+		<size>.7 0.05</size>
+		<alignment>center</alignment>
+		<verticalAlignment>middle</verticalAlignment>
+	</text>		
+	<!-- System View
+	Manufacturer -->
+	<text name="manufacturer" extra="true">
+		<alignment>left</alignment>
+		<origin>0 0</origin>
+		<pos>0.01 0.94</pos>
+		<size>0.375 0.05</size>
+	</text>
+	<!-- System View
+	Release Year -->
+	<text name="releaseYear" extra="true">
+		<alignment>center</alignment>
+		<origin>0.5 1</origin>
+		<pos>0.5 0.99</pos>
+		<size>0.2 0.05</size>
+	</text>
+	<!-- System View
+	System Type -->
+	<text name="systemtype" extra="true">
+		<alignment>right</alignment>
+		<origin>1 1</origin>
+		<pos>.99 .99</pos>
+		<size>0.375 0.05</size>
+	</text>
 
-	</view>
-
-
+</view>
 
 <!-- BASIC VIEW -->
 
-	<view name="basic">
+<view name="basic">
 	
-		<!-- Basic View
-		Gamelist & Background -->
+	<!-- Basic View
+	Gamelist & Background -->		
+	<image name="gamelist_background, gamelist_backgroundHelper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+	</image>
+	<image name="gamelist_background" extra="true">
+		<size>0.98 0.825</size>
+		<color>${themeAccent}66</color>
+	</image>
+	<image name="gamelist_backgroundHelper" extra="false">
+		<size>0.96 0.8</size>
+		<color>${themeColor1}33</color>
+	</image>
+	<textlist name="gamelist">
+		<selectorColor>${themeColor1}</selectorColor>
+		<selectedColor>${themeAccent}</selectedColor>
+		<primaryColor>000000</primaryColor>
+		<secondaryColor>${themeColor1}</secondaryColor>
+		<fontPath>${lightFont}</fontPath>
+		<origin>0.5 0.5</origin>
+		<pos>0.5 0.5</pos>
+		<size>0.96 0.8</size>
+		<fontSize>0.035</fontSize>
+	</textlist>
 		
-		<image name="gamelist_background, gamelist_backgroundHelper" extra="false">
-			<path>${backgroundImage}</path>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-		</image>
-		<image name="gamelist_background" extra="true">
-			<size>0.98 0.825</size>
-			<color>${themeAccent}80</color>
-		</image>
-		<image name="gamelist_backgroundHelper" extra="false">
-			<size>0.96 0.8</size>
-			<color>${themeColor1}33</color>
-		</image>
-		<textlist name="gamelist">
-			<selectorColor>${themeColor1}</selectorColor>
-			<selectedColor>${themeAccent}</selectedColor>
-			<primaryColor>000000</primaryColor>
-			<secondaryColor>${themeColor2}</secondaryColor>
-			<fontPath>${lightFont}</fontPath>
-			<origin>0.5 0.5</origin>
-			<pos>0.5 0.5</pos>
-			<size>0.96 0.8</size>
-			<fontSize>0.035</fontSize>
-		</textlist>
-		
-	</view>
-
-
+</view>
 
 <!-- DETAILED VIEW -->
 
-	<view name ="detailed">
+<view name ="detailed">
 
-		<!-- Detailed View
-		Metadata Backgrounds Boxes -->
-		<image name="gamelist_background, logo_background, video_background, desc_background, ratingAndDev_background" extra="true">
-			<path>${backgroundImage}</path>
-		</image>
-		<image name="gamelist_background" extra="true">
-			<origin>0 0.5</origin>
-			<pos>0.01 0.5</pos>
-			<size>0.475 0.825</size>
-			<color>${themeAccent}80</color>
-		</image>
-		<image name="video_background" extra="true">
-			<origin>.5 .5</origin>
-			<pos>0.74 .425</pos>
-			<size>0.5 0.675</size>
-			<color>${themeAccent}33</color>
-		</image>
-		<image name="desc_background" extra="true">
-			<origin>0 0</origin>
-			<pos>0.49 0.7725</pos>
-			<size>0.5 0.14</size>
-			<color>${themeAccent}80</color>
-		</image>
-		<image name="logo_background" extra="true">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.195</pos>
-			<size>0.465 0.2</size>
-			<color>${themeColor1}40</color>
-		</image>
-		<image name="ratingAndDev_background" extra="true">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.84</pos>
-			<size>0.465 0.13</size>
-			<color>${themeColor1}40</color>
-		</image>
-		<!-- Detailed View
-		Helper Boxes -->
-		<image name="gamelist_helper, rating_helper, developer_helper, video_helper, desc_helper, genre_helper, publisher_helper, releasedate_helper" extra="false">
-			<path>${backgroundImage}</path>
-		</image>
-		<image name="gamelist_helper" extra="false">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.55</pos>
-			<size>0.465 0.48</size>
-			<color>0000001A</color>
-		</image>
-		<image name="rating_helper" extra="false">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.82</pos>
-			<size>0.19 0.05</size>
-			<color>5bb80044</color>
-		</image>
-		<image name="developer_helper" extra="false">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.88</pos>
-			<size>0.465 0.05</size>
-			<color>5bb80044</color>
-		</image>
-		<image name="video_helper" extra="false">
-			<origin>.5 .5</origin>
-			<pos>0.74 .425</pos>
-			<size>0.49 0.66</size>
-			<color>4169E144</color>
-		</image>
-		<image name="desc_helper" extra="false">
-			<origin>0 0</origin>
-			<pos>0.495 0.78</pos>
-			<size>0.49 0.125</size>
-			<color>EEC90044</color>
-		</image>
-		<image name="genre_helper" extra="false">
-			<origin>1 1</origin>
-			<pos>.99 .99</pos>
-			<size>0.375 0.05</size>
-			<color>${helperColor1}</color>
-		</image>
-		<image name="publisher_helper" extra="false">
-			<origin>0 0</origin>
-			<pos>0.01 0.94</pos>
-			<size>0.375 0.05</size>
-			<color>${helperColor1}</color>
-		</image>
-		<image name="releasedate_helper" extra="false">
-			<origin>0.5 1</origin>
-			<pos>0.5 0.99</pos>
-			<size>0.2 0.05</size>
-			<color>5bb80044</color>
-		</image>
-		<!-- Detailed View
-		SystemLogo -->
-		<image name="logo">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.195</pos>
-			<maxSize>0.465 0.2</maxSize>
-		</image>
-		<!-- Detailed View
-		Gamelist -->
-		<textlist name="gamelist">
-			<selectorColor>${themeColor1}</selectorColor>
-			<selectedColor>${themeAccent}</selectedColor>
-			<primaryColor>000000</primaryColor>
-			<secondaryColor>${themeColor2}</secondaryColor>
-			<fontPath>${lightFont}</fontPath>
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.54</pos>
-			<size>0.465 0.47</size>
-			<fontSize>0.035</fontSize>
-			<horizontalMargin>0.01</horizontalMargin>
-		</textlist>		
-		<!-- Detailed View
-		Rating -->
-		<rating name="md_rating">
-			<origin>0.5 0.5</origin>
-			<pos>0.255 0.82</pos>
-			<size>0.2 0.05</size>
-			<filledPath>./_inc/images/star_full.png</filledPath>
-			<unfilledPath>./_inc/images/star_hollow.png</unfilledPath>
-		</rating>
-		<!-- Detailed View
-		Video & Image -->
-		<video name="md_video">
-			<origin>.5 .5</origin>
-			<pos>0.74 .425</pos>
-			<maxSize>0.49 0.66</maxSize>
-			<showSnapshotNoVideo>true</showSnapshotNoVideo>
-			<showSnapshotDelay>true</showSnapshotDelay>
-			<snapshotSource>image</snapshotSource>
-	    </video>
-		<!-- Detailed View
-		Description -->		
-		<text name="md_description">
-			<origin>0 0</origin>
-			<pos>0.495 0.78</pos>
-			<size>0.49 0.125</size>
-			<color>EEC90044</color>
-			<color>000000</color>
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>0.026</fontSize>
-			<alignment>left</alignment>
-			<forceUppercase>0</forceUppercase>
-			<lineSpacing>1.6</lineSpacing>
-		</text>
-		<!-- Detailed View
-		METADATA -->
-		<text name="md_developer, md_publisher, md_genre">
-			<color>${themeAccent}</color>	
-			<forceUppercase>0</forceUppercase>
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>0.035</fontSize>
-			<size>0.23 0.02</size>
-		</text>
-		<!-- Detailed View
-		Genre -->
-		<text name="md_genre">
-			<alignment>right</alignment>
-			<origin>1 1</origin>
-			<pos>.99 .99</pos>
-			<size>0.375 0.05</size>
-		</text>
-		<!-- Detailed View
-		Developer -->
-		<text name="md_developer">
-			<origin>0.5 0.5</origin>
-			<pos>0.248 0.88</pos>
-			<size>0.456 0.05</size>
-			<alignment>center</alignment>
-		</text>
-		<!-- Detailed View
-		Publisher -->
-		<text name="md_publisher">
-			<origin>0 0</origin>
-			<pos>0.01 0.94</pos>
-			<size>0.375 0.05</size>
-		</text>
-		<!-- Detailed View
-		Release Date -->
-		<datetime name="md_releasedate">
-			<color>${themeAccent}</color>
-			<forceUppercase>0</forceUppercase>
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>0.035</fontSize>
-			<size>0.3 0.05</size>
-			<origin>0.5 1</origin>
-			<pos>0.5 0.99</pos>
-			<alignment>center</alignment>
-			<horizontalAlignment>center</horizontalAlignment>
-		</datetime>
+	<!-- Detailed View
+	Metadata Backgrounds Boxes -->
+	<image name="gamelist_background, logo_background, video_background, desc_background, ratingAndDev_background" extra="false">
+		<path>${backgroundImage}</path>
+	</image>
+	<image name="gamelist_background" extra="true">
+		<origin>0 0.5</origin>
+		<pos>0.01 0.5</pos>
+		<size>0.475 0.825</size>
+		<color>${themeAccent}66</color>
+	</image>
+	<image name="video_background" extra="true">
+		<origin>.5 .5</origin>
+		<pos>0.74 .425</pos>
+		<size>0.5 0.675</size>
+		<color>${themeAccent}0D</color>
+	</image>
+	<image name="desc_background" extra="true">
+		<origin>0 0</origin>
+		<pos>0.49 0.7725</pos>
+		<size>0.5 0.14</size>
+		<color>${themeAccent}66</color>
+	</image>
+	<image name="logo_background" extra="true">
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.195</pos>
+		<size>0.463 0.2</size>
+		<color>${themeColor1}80</color>
+	</image>
+	<image name="ratingAndDev_background" extra="true">
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.84</pos>
+		<size>0.463 0.13</size>
+		<color>${themeColor1}80</color>
+	</image>
+	<!-- Detailed View
+	Helper Boxes -->
+	<image name="gamelist_helper, rating_helper, developer_helper, video_helper, desc_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<color>${helperColor1}</color>
+	</image>
+	<image name="gamelist_helper" extra="false">
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.55</pos>
+		<size>0.463 0.48</size>
+	</image>
+	<image name="rating_helper" extra="false">
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.81</pos>
+		<size>0.19 0.05</size>
+	</image>
+	<image name="developer_helper" extra="false">
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.87</pos>
+		<size>0.463 0.05</size>
+	</image>
+	<image name="video_helper" extra="false">
+		<origin>.5 .5</origin>
+		<pos>0.74 .425</pos>
+		<size>0.49 0.66</size>
+	</image>
+	<image name="desc_helper" extra="false">
+		<origin>0 0</origin>
+		<pos>0.495 0.78</pos>
+		<size>0.49 0.125</size>
+	</image>
+	<!-- Detailed View
+	SystemLogo -->
+	<image name="logo">
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.195</pos>
+		<maxSize>0.45 0.18</maxSize>
+	</image>
+	<!-- Detailed View
+	Gamelist -->
+	<textlist name="gamelist">
+		<selectorColor>${themeColor1}</selectorColor>
+		<selectedColor>${themeAccent}</selectedColor>
+		<primaryColor>000000</primaryColor>
+		<secondaryColor>${themeColor1}</secondaryColor>
+		<fontPath>${lightFont}</fontPath>
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.54</pos>
+		<size>0.463 0.47</size>
+		<fontSize>0.035</fontSize>
+		<horizontalMargin>0.01</horizontalMargin>
+	</textlist>		
+	<!-- Detailed View
+	Rating -->
+	<rating name="md_rating">
+		<origin>0.5 0.5</origin>
+		<pos>0.255 0.81</pos>
+		<size>0.2 0.05</size>
+		<filledPath>./_inc/images/star_full.png</filledPath>
+		<unfilledPath>./_inc/images/star_hollow.png</unfilledPath>
+	</rating>
+	<!-- Detailed View
+	Video & Image -->
+	<video name="md_video">
+		<origin>.5 .5</origin>
+		<pos>0.74 .425</pos>
+		<maxSize>0.49 0.66</maxSize>
+		<showSnapshotNoVideo>true</showSnapshotNoVideo>
+		<showSnapshotDelay>true</showSnapshotDelay>
+		<snapshotSource>image</snapshotSource>
+	</video>
+	<!-- Detailed View
+	Description -->		
+	<text name="md_description">
+		<origin>0 0</origin>
+		<pos>0.495 0.78</pos>
+		<size>0.49 0.125</size>
+		<color>EEC90044</color>
+		<color>000000</color>
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.026</fontSize>
+		<alignment>left</alignment>
+		<forceUppercase>0</forceUppercase>
+		<lineSpacing>1.6</lineSpacing>
+	</text>
+	<!-- Detailed View
+	Developer -->
+	<text name="md_developer">
+		<color>${themeAccent}</color>	
+		<forceUppercase>0</forceUppercase>
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.035</fontSize>
+		<origin>0.5 0.5</origin>
+		<pos>0.247 0.87</pos>
+		<size>0.453 0.05</size>
+		<alignment>center</alignment>
+	</text>
+
+</view>
+
+<!-- GRID VIEW -->
+
+<view name="grid">
+	
+	<!-- Helpers -->
+	<image name="name_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>.5 .5</origin>
+		<pos>0.5 0.15</pos>
+		<size>.96 0.10</size>
+		<color>${helperColor2}</color>
+	</image>
+	<image name="metadata_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>.5 .5</origin>
+		<pos>0.5 0.85</pos>
+		<size>.96 0.10</size>
+		<color>${helperColor2}</color>
+	</image>
+	<image name="developer_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>.5 .5</origin>
+		<pos>0.26 0.85</pos>
+		<size>.48 0.10</size>
+		<color>${helperColor1}</color>
+	</image>
+	<!-- Grid -->
+	<imagegrid name="gamegrid">
+		<pos>0 0</pos>
+		<size>1 1</size>
+		<margin>0.005 0.010</margin>
+		<padding>0.1 0.0 0.1 0.0</padding>
+		<autoLayout>3 1</autoLayout>
+		<autoLayoutSelectedZoom>1.05</autoLayoutSelectedZoom>
+		<animateSelection>false</animateSelection>
+		<scrollDirection>horizontal</scrollDirection>
+		<centerSelection>true</centerSelection>
+		<scrollLoop>true</scrollLoop>
+		<zIndex>60</zIndex>
+	</imagegrid>
+	<text name="gridtile">
+		<color>00000000</color>
+		<backgroundColor>00000000</backgroundColor>
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>0.01</fontSize>
+		<alignment>center</alignment>
+		<visible>false</visible>
+	</text>
+	<ninepatch name="gridtile.background:selected">
+		<animateColor>FFFFFF</animateColor>
+		<animateColorTime>800</animateColorTime>
+	</ninepatch>
+	<gridtile name="default">
+		<backgroundColor>FFFFFF00</backgroundColor>
+		<backgroundCornerSize>9 9</backgroundCornerSize>
+		<selectionMode>image</selectionMode>
+		<padding>5 5</padding>
+	</gridtile>
+	<!-- Metadata -->
+	<text name="md_name">
+		<origin>.5 .5</origin>
+		<pos>0.5 0.15</pos>
+		<fontPath>${mediumFont}</fontPath>
+		<fontSize>0.04</fontSize>
+		<size>.96 0.10</size>
+		<forceUppercase>1</forceUppercase>
+		<alignment>center</alignment>
+		<color>${themeAccent}</color>
+		<glowColor>00000066</glowColor>
+	</text>
+	<!-- Developer -->
+	<text name="md_developer">
+		<color>${themeAccent}</color>	
+		<forceUppercase>0</forceUppercase>
+		<fontPath>${mediumFont}</fontPath>
+		<fontSize>0.04</fontSize>
+		<origin>.5 .5</origin>
+		<pos>0.26 0.85</pos>
+		<size>.48 0.10</size>
+		<alignment>left</alignment>
+		<horizontalAlignment>center</horizontalAlignment>
+	</text>
+	<!-- Rating -->
+	<image name="rating_helper" extra="false">
+		<path>${backgroundImage}</path>
+		<origin>.5 0.5</origin>
+		<pos>0.885 0.85</pos>
+		<size>.19 0.05</size>
+		<color>ffffff33</color>
+	</image>
+	<rating name="md_rating">
+		<origin>.5 0.5</origin>
+		<pos>0.885 0.85</pos>
+		<size>.19 0.05</size>
+		<filledPath>./_inc/images/star_full.png</filledPath>
+		<unfilledPath>./_inc/images/star_hollow.png</unfilledPath>
+	</rating>
+
+</view> 
+
+<!-- MENU VIEW -->
+
+<view name="menu">
+
+	<menuBackground name="menubg">
+			<color>000000D9</color>
+	</menuBackground>
+	<menuText name="menutitle">
+		<fontPath>${mediumFont}</fontPath>
+		<fontSize>.036</fontSize>
+		<color>${themeAccent}</color>
+	</menuText>
+	<menuText name="menutext">
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>.033</fontSize>
+		<color>${themeAccent}</color>
+	</menuText>
+	<menuText name="menufooter, menutextsmall">
+		<fontPath>${lightFont}</fontPath>
+		<fontSize>.02</fontSize>		 
+		<color>${themeAccent}</color>
+	</menuText>
 		
-
-	</view>
-
-
-<!-- 
-GRID VIEW 
--->
-
-
-<!-- 
-MENU VIEW 
--->
-
-	<view name="menu">
-		<menuBackground name="menubg">
-			<color>${themeColor1}D9</color>
-		</menuBackground>
-		<menuText name="menutitle">
-			<fontPath>${mediumFont}</fontPath>
-			<fontSize>.035</fontSize>
-			<color>${themeAccent}</color>
-		</menuText>
-		<menuText name="menutext">
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>.033</fontSize>
-			<color>${themeAccent}</color>
-		</menuText>
-		<menuText name="menufooter, menutextsmall">
-			<fontPath>${lightFont}</fontPath>
-			<fontSize>.02</fontSize>		 
-			<color>${themeAccent}</color>
-		</menuText>
-		
-	</view>
+</view>
 
 </theme>

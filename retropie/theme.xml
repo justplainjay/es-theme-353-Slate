@@ -2,23 +2,36 @@
 <theme>
 
 	<formatVersion>7</formatVersion>
-	<include>./../theme.xml</include>
-	
-<!-- System & Detailed View Logos -->
-	<view name="system, detailed">
-		<image name="logo">
-			<path>./system.svg</path>
-			<path>./system.png</path>
-    	</image>
-	</view>
+	<include>./../theme.xml</include>	
+<!-- SYSTEM & DETAILED View Logos -->
+<view name="system, detailed">
 
-<!-- Basic & Detailed System Name -->
-	<view name="detailed, basic">
-		<text name="systemFullName" extra="true">
-			<text>Options</text>
-		</text>
-	</view>
+	<image name="logo">
+		<path>./white.svg</path>
+	</image>
+
+</view>
+<!-- BASIC & DETAILED System Name -->
+<view name="detailed, basic, grid">
+
+	<text name="systemFullName" extra="true">
+		<text>Settings</text>
+	</text>
+
+</view>
+<!-- SYSTEM VIEW Metadata -->
+<view name="system">
+
+	<text name="systemtype" extra="false">
+		<text>System Config</text>
+	</text>
+	<text name="manufacturer" extra="false">
+		<text>ArkOS</text>
+	</text>
+	<text name="releaseYear" extra="false">
+		<text></text>
+	</text>
 	
-<!-- Description for System View -->
+</view>
 
 </theme>
